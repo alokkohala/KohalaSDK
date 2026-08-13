@@ -1,0 +1,58 @@
+{
+  "name": "@kohala/sdk",
+  "version": "0.3.3",
+  "description": "Typed, isomorphic client for the Kohala public REST API \u2014 build, govern, run, and monetize AI agents.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alokkohala/KohalaSDK.git",
+    "directory": "packages/sdk"
+  },
+  "homepage": "https://kohala.ai/developers",
+  "bugs": {
+    "url": "https://kohala.ai/contact"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "kohala",
+    "ai",
+    "agents",
+    "sdk",
+    "llm",
+    "governance",
+    "koan"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  }
+}

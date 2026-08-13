@@ -1,0 +1,62 @@
+{
+  "name": "@kohala/vue",
+  "version": "0.3.4",
+  "description": "Vue 3 plugin and composables for the Kohala API.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alokkohala/KohalaSDK.git",
+    "directory": "packages/vue"
+  },
+  "homepage": "https://kohala.ai/developers",
+  "bugs": {
+    "url": "https://kohala.ai/contact"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "kohala",
+    "vue",
+    "composables",
+    "ai",
+    "agents"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3"
+  },
+  "dependencies": {
+    "@kohala/sdk": "^0.3.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vue": "^3.5.12"
+  }
+}

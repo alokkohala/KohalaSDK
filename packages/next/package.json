@@ -1,0 +1,66 @@
+{
+  "name": "@kohala/next",
+  "version": "0.3.3",
+  "description": "Next.js helpers and components for the Kohala API.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alokkohala/KohalaSDK.git",
+    "directory": "packages/next"
+  },
+  "homepage": "https://kohala.ai/developers",
+  "bugs": {
+    "url": "https://kohala.ai/contact"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "kohala",
+    "next",
+    "nextjs",
+    "ai",
+    "agents"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "next": ">=13",
+    "react": ">=17"
+  },
+  "dependencies": {
+    "@kohala/sdk": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.11",
+    "@types/react": "^18.3.12",
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  }
+}
